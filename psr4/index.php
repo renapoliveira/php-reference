@@ -2,7 +2,7 @@
 use Codecourse\Repositories\UserRepository as UserRepository;
 use Codecourse\Filters\AuthFilter as AuthFilter;
 
-require_once 'src/start.php';
+$loader = require __DIR__.'/vendor/autoload.php';
 
 $user = new UserRepository();
 $filter = new AuthFilter();
