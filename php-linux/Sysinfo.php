@@ -1,5 +1,10 @@
 <?php
-
+/*
+ *  TESTED:
+ *          UBUNTU 14.04
+ *          CENTOS 5.11
+ *
+ */
 class Sysinfo
 {
     private $whereis;
