@@ -100,5 +100,20 @@ class Sysinfo
         return $this->cmd("cat", $this->dnsFile);
     }
 
+    public function getIptablesFilter()
+    {
+        return $this->cmd("iptables", "-t filter -L");
+    }
+
+    public function getIptablesMangle()
+    {
+        return $this->cmd("iptables", "-t mangle -L");
+    }
+
+    public function getIptablesNat()
+    {
+        return $this->cmd("iptables", "-t nat -L");
+    }
+
 }
 
