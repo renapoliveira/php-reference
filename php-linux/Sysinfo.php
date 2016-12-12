@@ -45,14 +45,14 @@ class Sysinfo
         return $this->cmd("ifconfig");
     }
 
-    public function getApacheLog()
+    public function getApacheLog($lines = 10)
     {
-        return $this->cmd("tail", "-n 10 ".$this->apacheLog);
+        return $this->cmd("tail", "-n ".$lines." ".$this->apacheLog);
     }
 
-    public function getApacheErrorLog()
+    public function getApacheErrorLog($lines = 10)
     {
-        return $this->cmd("tail", "-n 10 ".$this->apacheErrorLog);
+        return $this->cmd("tail", "-n ".$lines." ".$this->apacheErrorLog);
     }
 
     public function getUname()
